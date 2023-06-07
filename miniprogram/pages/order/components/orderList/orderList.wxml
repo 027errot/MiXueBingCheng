@@ -1,0 +1,25 @@
+<!--pages/order/components/orderList/orderList.wxml-->
+<view wx:if="{{list.length}}" class="orderList">
+  <view wx:for="{{list}}" wx:key="item" wx:for-item="item" wx:for-index="index" class="orderList--item" data-item="{{item}}" bindtap="toDetails">
+    <view class="orderList--part">
+      <view style="display: flex; align-items: center;">
+        <view class="orderList--getWay">{{item.getWay ? '外卖' : '自提'}}</view>
+        <view class="orderList--storeName">{{item.storeName}} ></view>
+      </view>
+      <view class="orderList--orderStatus">{{item.orderStatus}}</view>
+    </view>
+    <image src="{{item.imgPath}}" mode="aspectFit" class="orderList--img"></image>
+    <view class="orderList--part">
+      <view class="orderList--orderTime">{{item.orderTime}}</view>
+      <view style="display: flex; align-items: center;">
+        <view class="orderList--totalNum">共{{item.totalNum}}件</view>
+        <view class="orderList--totalCost">￥{{item.totalCost}}</view>
+      </view>
+    </view>
+  </view>
+  <view class="orderList--end">已经到底了...</view>
+</view>
+<view wx:else class="orderList__empty">
+  <view class="orderList__empty--tip">你还没有订单，快去选一杯喜欢的饮品吧~</view>
+  <button class="orderList__empty--btn" size="mini">去喝一杯</button>
+</view>

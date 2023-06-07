@@ -1,0 +1,131 @@
+/* pages/home/home.wxss */
+.home{
+  padding: 0rpx 10rpx;
+  &__item{
+    margin-bottom: 30rpx;
+  }
+  &__account{
+    display: flex;
+    justify-content: space-between;
+    border: 1rpx solid #efefef;
+    border-radius: 10rpx;
+    padding: 20rpx 10rpx;
+    box-shadow: 2rpx 5rpx 10rpx #efefef;
+    &--member{
+      display: flex;
+      align-items: center;
+    }
+    &--img{
+      width: 70rpx;
+      height: 70rpx;
+      margin-right: 10rpx;
+    }
+    &--grade{
+      color: #333333;
+      font-size: 35rpx;
+      font-weight: bold;
+    }
+    &--tip{
+      font-size: 25rpx;
+      color: #888888;
+    }
+    &--residue{
+      display: flex;
+      text-align: center;
+    }
+    &--residueItem{
+      margin-right: 10rpx;
+    }
+    &--num{
+      color: #333333;
+      font-size: 35rpx;
+      font-weight: bold;
+    }
+    &--type{
+      font-size: 25rpx;
+      color: #888888;
+    }
+  }
+  &__getWay{
+    display: flex;
+    justify-content: space-between;
+    &--item{
+      width: 350rpx;
+      height: 350rpx;
+      border-radius: 30rpx;
+      box-sizing: border-box;
+      padding: 30rpx 20rpx;
+      text-align: end;
+      background-color: rgb(255,250,250);
+      &:last-child{
+        background-color: rgb(255,249,237);
+      }
+    }
+    &--type{
+      font-size: 40rpx;
+      font-weight: bold;
+      color: #333333;
+      margin-bottom: 10rpx;
+      text-align: left;
+    }
+    &--tip{
+      font-size: 25rpx;
+      color: #888888;
+      text-align: left;
+    }
+    &--img{
+      width: 200rpx;
+      height: 200rpx;
+      position: relative;
+    }
+  }
+  &__collage{
+    // background-color: blue;
+    border-radius: 20rpx;
+    background-color: rgb(255,248,248);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10rpx 25rpx;
+    &--img{
+      width: 80rpx;
+      height: 80rpx;
+      margin-right: 10rpx;
+    }
+    &--title{
+      font-size: 35rpx;
+    }
+    &--gather{
+      color: #888888;
+      font-size: 27rpx;
+    }
+  }
+  &__activity{
+    display: flex;
+    justify-content: space-between;
+    &--item{
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      border: 1rpx solid #efefef;
+      border-radius: 20rpx;
+      padding: 25rpx;
+      padding-bottom: 20rpx;
+    }
+    &--title{
+      font-weight: bold;
+      font-size: 36rpx;
+      margin-bottom: 10rpx;
+    }
+    &--img{
+      width: 100rpx;
+      height: 100rpx;
+    }
+  }
+}
+.swiper{
+  margin-bottom: 10rpx;
+  &--item{
+    background-color: red;
+  }
+}

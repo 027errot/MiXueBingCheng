@@ -1,0 +1,10 @@
+<!--pages/coupon/coupon.wxml-->
+<view class="coupon">
+  <view class="coupon__tab">
+    <view wx:for="{{tabList}}" wx:key="tab" wx:for-item="tab" wx:for-index="index" data-type="{{tab.type}}" bindtap="changeTab">
+      <view>{{tab.name}}({{tab.num}})</view>
+      <view wx:if="{{activeTab === tab.type}}" class="coupon__tab--activeTab"></view>
+    </view>
+  </view>
+  <view class="coupon__table">暂无优惠券</view>
+</view>

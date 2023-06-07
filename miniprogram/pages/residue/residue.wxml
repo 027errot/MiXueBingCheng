@@ -1,0 +1,55 @@
+<!--pages/residue/residue.wxml-->
+<view class="residue">
+  <view class="residue__head">
+    <view>
+      <view class="residue__head--num">1394</view>
+      <view class="residue__head--route">雪王币明细 > 雪王币规则 ></view>
+    </view>
+    <image src="../../static/corridor.png" class="residue__head--img"></image>
+  </view>
+  <viwe class="residue__container">
+    <view class="residue__swiper">
+      <swiper autoplay="true" style="height: 120rpx;">
+        <swiper-item wx:for="{{swiperList}}" wx:key="item" wx:for-index="index" wx:for-item="item" style="display: flex; justify-content: center; align-items: center;">
+          <image src="{{item.imgPath}}" class="residue__swiper--img"></image>
+        </swiper-item>
+      </swiper>
+    </view>
+    <view class="residue__task">
+      <view class="residue__task--title">日常任务</view>
+      <view class="residue__task--item" style="background-color: rgb(255,235,237);">
+        <view style="display: flex;">
+          <image src="../../static/home.png" class="residue__task--img"></image>
+          <view>
+            <view class="residue__task--matter">每日签到</view>
+            <view class="residue__task--tip">+5雪王币</view>
+          </view>
+        </view>
+        <view class="residue__task--btn" style="color: rgb(230, 0, 18);">签到</view>
+      </view>
+      <view class="residue__task--item" style="background-color: rgb(255,245,221);">
+        <view style="display: flex;">
+          <image src="../../static/home.png" class="residue__task--img"></image>
+          <view>
+            <view class="residue__task--matter">完成订单</view>
+            <view class="residue__task--tip">+10雪王币 (每实付1元)</view>
+          </view>
+        </view>
+        <view class="residue__task--btn" style="color: rgb(255, 177, 0);">去下单</view>
+      </view>
+    </view>
+    <view class="residue__task">
+      <view class="residue__task--title">新手任务</view>
+      <view class="residue__task--item" style="background-color: rgb(231,230,250);">
+        <view style="display: flex;">
+          <image src="../../static/home.png" class="residue__task--img"></image>
+          <view>
+            <view class="residue__task--matter">完成首单</view>
+            <view class="residue__task--tip">+20雪王币 (每实付1元)</view>
+          </view>
+        </view>
+        <view class="residue__task--btn" style="background-color: transparent; color: rgb(82, 70, 250);">签到</view>
+      </view>
+    </view>
+  </viwe>
+</view>

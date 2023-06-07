@@ -1,0 +1,82 @@
+/* pages/residue/residue.wxss */
+.residue{
+  background-color: rgb(251, 63, 65);
+  &__head{
+    // background-color: rgb(251, 63, 65);
+    display: flex;
+    justify-content: space-between;
+    padding: 50rpx 30rpx 10rpx;
+    &--num{
+      color: #ffffff;
+      font-size: 45rpx;
+      font-weight: bold;
+    }
+    &--route{
+      color: #ffffff;
+      font-size: 25rpx;
+      padding-bottom: 50rpx;
+    }
+    &--img{
+      width: 180rpx;
+      height: 180rpx;
+    }
+  }
+  &__container{
+    background-color: rgb(247,247,247);
+  }
+  &__swiper{
+    // border: 1px solid red;
+    border-radius: 20rpx 20rpx 0 0;
+    background-color: #ffffff;
+    padding: 30rpx 20rpx 10rpx;
+    &--img{
+      // width: 300rpx;
+      height: 100rpx;
+      border: 1px solid #999999;
+      border-radius: 10rpx;
+    }
+  }
+  &__task{
+    background-color: #ffffff;
+    padding: 10rpx 20rpx;
+    &--title{
+      color: rgb(51, 51, 51);
+      font-size: 40rpx;
+      font-weight: bold;
+      margin-bottom: 20rpx;
+    }
+    &--item{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10rpx;
+      margin-bottom: 20rpx;
+      border-radius: 20rpx;
+    }
+    &--img{
+      width: 100rpx;
+      height: 100rpx;
+      margin-right: 20rpx;
+    }
+    &--matter{
+      font-size: 30rpx;
+      font-weight: bold;
+      color: #333333;
+      margin: 10rpx 0;
+    }
+    &--tip{
+      font-size: 25rpx;
+      color: rgb(119,119,119);
+      margin: 10rpx 0;
+    }
+    &--btn{
+      width: 100rpx;
+      background-color: #ffffff;
+      border: 1px solid transparent;
+      border-radius: 10rpx;
+      padding: 10rpx 15rpx;
+      font-size: 30rpx;
+      text-align: center;
+    }
+  }
+}

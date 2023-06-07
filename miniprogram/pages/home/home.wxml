@@ -1,0 +1,59 @@
+<!--pages/home/home.wxml-->
+<view class="swiper">
+  <swiper>
+    <swiper-item>
+      <image src="../../static/home.png" mode="aspectFit"></image>
+    </swiper-item>
+    <swiper-item>
+      <image src="../../static/home.png" mode="aspectFit"></image>
+    </swiper-item>
+    <swiper-item>
+      <image src="../../static/home.png" mode="aspectFit"></image>
+    </swiper-item>
+  </swiper>
+</view>
+<view class="home">
+  <!-- 大雪人会员 -->
+  <view class="home__account home__item">
+    <view class="home__account--member" bindtap="toMine">
+      <image src="../../static/home.png" class="home__account--img" />
+      <view>
+        <view class="home__account--grade">大雪人会员</view>
+        <view class="home__account--tip">再升一级可享【攒币加速】等9项权益</view>
+      </view>
+    </view>
+    <view class="home__account--residue">
+      <view class="home__account--residueItem" bindtap="toResidue">
+        <view class="home__account--num">1389</view>
+        <view class="home__account--type">雪王币</view>
+      </view>
+      <view class="home__account--residueItem" bindtap="toCoupon">
+        <view class="home__account--num">0</view>
+        <view class="home__account--type">优惠券</view>
+      </view>
+    </view>
+  </view>
+  <!-- 自取 || 外卖 -->
+  <view class="home__getWay home__item">
+    <view wx:for="{{getWayList}}" wx:key="item" wx:for-item="item" wx:for-index="index" class="home__getWay--item" data-type="{{item.type}}" bindtap="toGetWay">
+      <view class="home__getWay--type">{{ item.type ? '外卖' : '自取' }}</view>
+      <view class="home__getWay--tip">{{ item.tip }}</view>
+      <image src="{{item.imgPath}}" class="home__getWay--img"></image>
+    </view>
+  </view>
+  <!-- 拼单 -->
+  <view class="home__collage home__item" bindtap="collage">
+    <view style="display: flex; align-items: center;">
+      <image src="../../static/home.png" class="home__collage--img"></image>
+      <view class="home__collage--title">好友拼单</view>
+    </view>
+    <view class="home__collage--gather">呼朋唤友一起拼单></view>
+  </view>
+  <!-- 活动 -->
+  <view class="home__activity home__item">
+    <view wx:for="{{activityList}}" wx:key="item" wx:for-item="item" wx:for-index="index" class="home__activity--item" data-item="{{item}}" bindtap="toLink">
+      <view class="home__activity--title">{{item.title}}</view>
+      <image src="{{item.imagePath}}" class="home__activity--img"></image>
+    </view>
+  </view>
+</view>

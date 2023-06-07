@@ -1,0 +1,75 @@
+<!--pages/indent/indent.wxml-->
+<view class="indent">
+  <view class="indent__storeInfo">
+    <view class="indent__storeInfo--item">
+      <view class="indent__storeInfo--store">蜜雪冰城师大西门店 ></view>
+      <view style="display: flex;">
+        <image src="../../static/home.png" style="width: 40rpx; height: 40rpx;">
+        </image>
+        <view class="indent__storeInfo--distance">直线距离1.1km</view>
+      </view>
+    </view>
+    <view class="indent__storeInfo--item">
+      <image src="../../static/corridor.png" class="indent__storeInfo--img"></image>
+      <view class="indent__storeInfo--collage">拼单</view>
+    </view>
+  </view>
+  <view class="indent__coupon">
+    <view class="indent__coupon--announcement">
+      <view style="display: flex; align-items: center;">
+        <view class="indent__coupon--tag">公告</view>
+        <text class="indent__coupon--tip">珍惜粮食，按需点餐~</text>
+      </view>
+      <image src="{{isFold ? '../../static/corridor.png' : '../../static/home.png'}}" class="indent__coupon--btn" mode="aspectFit" bindtap="showCoupon"></image>
+    </view>
+    <!-- <view wx:if="{{!isFold}}" class="indent__coupon--list">优惠券列表</view> -->
+  </view>
+  <view style="height: 680rpx;">
+    <view class="indent__container">
+      <!-- 左边 -->
+      <scroll-view scroll-y="true" class="indent__container--navigate">
+        <view wx:for="{{beverageList}}" wx:key="item" wx:for-index="index" wx:for-item="item" class="indent__container--navigateItem {{currentCategoryId===item.categoryId ? 'indent__container--navigateItemActive' : ''}}" data-item="{{item}}" bindtap="navChange">
+          <view wx:if="{{currentCategoryId===item.categoryId}}" class="navigateItemActive"></view>
+          <image src="{{item.categoryImg}}" class="indent__container--categoryImg"></image>
+          <view class="indent__container--category">{{item.category}}</view>
+        </view>
+      </scroll-view>
+      <scroll-view scroll-y="true" class="indent__container--menu" bindscroll="scrollTo" scroll-top="{{scrollTop}}" scroll-into-view="{{currentId}}" scroll-with-animation="true">
+        <swiper circular="true" autoplay="true" indicator-dots="true" interval="2700">
+          <swiper-item wx:for="{{swiperList}}" wx:key="item" wx:for-index="index" wx:for-item="item">
+            <image src="{{item.imgPath}}" mode="aspectFit" class="swiperImg"></image>
+          </swiper-item>
+        </swiper>
+        <!-- {{currentCategoryId}} -->
+        <!-- 右边 -->
+        <view wx:for="{{beverageList}}" wx:key="category" wx:for-index="index" wx:for-item="category">
+          <view class="indent__container--itemTitle">{{category.category}}</view>
+          <view wx:for="{{category.list}}" wx:key="item" wx:for-index="index" wx:for-item="item" class="indent__container--goodItem">
+            <image src="{{item.imgPath}}" class="indent__container--goodImg" mode="aspectFit"></image>
+            <view style="width: 100%;">
+              <view class="indent__container--name">{{item.name}}</view>
+              <view class="indent__container--describe">{{item.describe}}</view>
+              <view style="display: flex; justify-content: space-between;">
+                <view>
+                  <text>￥</text>
+                  <text>{{item.price}}</text>
+                  <text>起</text>
+                </view>
+                <image src="../../static/home.png" class="indent__container--add" data-item="{{item}}" bindtap="add"></image>
+              </view>
+            </view>
+          </view>
+        </view>
+
+      </scroll-view>
+    </view>
+  </view>
+  <view class="indent__footer">
+    <image src="../../static/corridor.png" class="indent__footer--shopCart"></image>
+    <view style="display: flex; align-items: center;">
+      <text style="font-size: 30rpx;">合计</text>
+      <text style="font-size: 35rpx; font-weight: bold;">￥{{totalCoat}}</text>
+      <view class="indent__footer--btn" bindtap="settlement">去结算</view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,139 @@
+/* pages/mine/mine.wxss */
+.mine{
+  // display: flex;
+  padding: 20rpx;
+  // padding-bottom: 10rpx;
+  background-color: rgb(248,248,248);
+  &--item{
+    margin-bottom: 30rpx;
+  }
+  // 签到
+  &__sign{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    &--img{
+      width: 80rpx;
+      height: 80rpx;
+      margin-right: 10rpx;
+    }
+    &--phone{
+      color: #333333;
+    }
+    &--btn{
+      background-color: rgb(231, 0, 21);
+      border-radius: 50rpx;
+      padding: 10rpx 20rpx;
+      color: #ffffff;
+      font-size: 30rpx;
+    }
+  }
+  // 会员等级
+  &__grade{
+    background-color: rgb(256,211,91);
+    border-radius: 20rpx;
+    display: flex;
+    padding: 40rpx 20rpx;
+    color: #ffffff;
+    &--left{
+      flex: 2;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    &--right{
+      flex: 1;
+      text-align: center;
+      padding: 20rpx 10rpx;
+    }
+    &--member{
+      font-size: 40rpx;
+    }
+    &--experienceBar{
+      font-size: 30rpx;
+    }
+    &--tip{
+      font-size: 25rpx;
+    }
+    &--img{
+      width: 120rpx;
+      height: 120rpx;
+    }
+    &--view{
+      font-size: 25rpx;
+    }
+  }
+  // 雪王币、优惠券
+  &__remain{
+    display: flex;
+    justify-content: space-between;
+    &--item{
+      background-color: #ffffff;
+      border-radius: 30rpx;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20rpx;
+      width: 43%;
+    }
+    &--num{
+      color: #333333;
+      font-size: 37rpx;
+      font-weight: bold;
+      margin-bottom: 5rpx;
+    }
+    &--type{
+      color: rgb(119,119,119);
+      font-size: 30rpx;
+    }
+    &--img{
+      width: 100rpx;
+      height: 100rpx;
+    }
+  }
+  // 功能区域
+  &__function{
+    background-color: #ffffff;
+    border-radius: 30rpx;
+    &--item{
+      display: flex;
+      justify-content: space-between;
+      padding: 15rpx 30rpx;
+    }
+    &--title{
+      color: rgb(51,51,51);
+      font-size: 30rpx;
+    }
+    &--view{
+      color: rgb(51,51,51);
+      
+    }
+  }
+  // 下载APP
+  &__app{
+    background-color: #ffffff;
+    border-radius: 30rpx;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20rpx 30rpx;
+    &--img{
+      width: 50rpx;
+      height: 50rpx;
+      margin-right: 20rpx;
+    }
+    &--des{
+      font-size: 30rpx;
+    }
+    &--download{
+      font-size: 30rpx;
+    }
+  }
+  // 版本号
+  &__version{
+    color: rgb(170,170,170);
+    font-size: 20rpx;
+    text-align: center;
+  }
+}

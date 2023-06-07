@@ -1,0 +1,20 @@
+/* pages/coupon/coupon.wxss */
+.coupon{
+  &__tab{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20rpx;
+    &--activeTab{
+      width: 60rpx;
+      height: 10rpx;
+      border-radius: 20rpx;
+      background-color: rgb(230,0,18);
+      position: absolute;
+      top: 55rpx;
+      margin-left: 50rpx;
+    }
+    &__table{
+      background-color: rgb(170, 170, 170);
+    }
+  }
+}

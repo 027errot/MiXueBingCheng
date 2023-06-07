@@ -1,0 +1,48 @@
+<!--pages/order/components/orderDetails/orderDetails.wxml-->
+<view class="orderDetails">
+  <view class="orderDetails__top">
+    <view>
+      <view class="orderDetails--state">订单已完成</view>
+      <view class="orderDetails--tip">如未取餐，请及时到点领取，祝您用餐愉快</view>
+    </view>
+    <image src="../../../../static/corridor.png" class="orderDetails--img"></image>
+  </view>
+  <view class="orderDetails__container">
+    <view class="orderDetails__order">
+      <view class="orderDetails__order--item" bindtap="toOrder">
+        <view class="orderDetails__order--storeName">蜜雪冰城师大西门店 ></view>
+        <view style="display: flex; justify-content: space-between; align-items: center;">
+          <view class="orderDetails__order--distance">直线距离767m | 上街镇福建师范大学旗山校区</view>
+          <view>
+            <image src="../../../../static/home.png" class="orderDetails__order--icon"></image>
+            <image src="../../../../static/corridor.png" class="orderDetails__order--icon"></image>
+          </view>
+        </view>
+      </view>
+      <view class="orderDetails__order--item" style="display: flex; justify-content: space-between;">
+        <view class="orderDetails__order--info">
+          <image src="../../../../static/home.png" class="orderDetails__order--img"></image>
+          <view style="display: flex; flex-direction: column; justify-content: space-between;">
+            <view class="orderDetails__order--goodName">冰淇淋搅搅杯（黄桃果霸杯）</view>
+            <view class="orderDetails__order--num">×1</view>
+          </view>
+        </view>
+        <view class="orderDetails__order--price">￥6</view>
+      </view>
+      <view class="orderDetails__order--item" style="text-align: end;">
+        <view class="orderDetails__order--total">共1件，合计￥6</view>
+        <view>
+          <text class="orderDetails__order--reward">奖励67雪王币</text>
+          <text class="orderDetails__order--tip">(完成订单后奖励次日到账)</text>
+        </view>
+      </view>
+    </view>
+    <view class="orderDetails__info">
+      <view wx:for="{{infoList}}" wx:key="item" wx:for-index="index" wx:for-item="item" class="orderDetails__info--item">
+        <view class="orderDetails__info--label">{{item.label}}</view>
+        <view class="orderDetails__info--value">{{item.value}}</view>
+        <view wx:if="{{item.label === '订单编号'}}" class="orderDetails__info--copy">复制</view>
+      </view>
+    </view>
+  </view>
+</view>

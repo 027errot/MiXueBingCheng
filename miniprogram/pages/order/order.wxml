@@ -1,0 +1,20 @@
+<!--pages/order/order.wxml-->
+<view class="order">
+  <view class="order__tab">
+    <view wx:for="{{tabList}}" wx:key="tab" wx:for-item="tab" wx:for-index="index" data-type="{{tab.type}}" bindtap="changeTab">
+      <view>{{tab.name}}</view>
+      <view wx:if="{{activeTab === tab.type}}" class="order__tab--activeTab"></view>
+    </view>
+  </view>
+</view>
+<swiper current="{{activeTab}}" bindchange="swiperTabChange" class="order__swiper" style="height: {{Height}};">
+  <swiper-item>
+    <orderList list="{{allList}}"/>
+  </swiper-item>
+  <swiper-item>
+    <orderList list="{{historyList}}" />
+  </swiper-item>
+  <swiper-item>
+    <orderList list="{{chargebackList}}" />
+  </swiper-item>
+</swiper>

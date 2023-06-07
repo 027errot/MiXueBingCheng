@@ -1,0 +1,81 @@
+/* pages/order/components/orderList/orderList.wxss */
+.orderList{
+  // background-color: rgb(245,245,245);
+  padding: 10rpx 20rpx;
+  &--item{
+    padding: 10rpx 20rpx;
+    margin-bottom: 20rpx;
+    background-color: #ffffff;
+    border-radius: 20rpx;
+  }
+  &--part{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &--getWay{
+    background-color: rgb(255,248,248);
+    // background-color: red;
+    color: rgb(255,82,84);
+    padding: 10rpx;
+    border-radius: 25rpx;
+    font-size: 20rpx;
+    font-weight: bold;
+    margin-right: 20rpx;
+  }
+  &--storeName{
+    color: #333333;
+    font-size: 35rpx;
+    font-weight: bold;
+  }
+  &--orderStatus{
+    color: rgb(170,170,170);
+    font-size: 30rpx;
+  }
+  &--img{
+    width: 120rpx;
+    height: 120rpx;
+    margin: 20rpx 0;
+    border-radius: 20rpx;
+    background-color: #eeeeee;
+  }
+  &--orderTime{
+    color: rgb(170,170,170);
+    font-size: 30rpx;
+  }
+  &--totalNum{
+    color: rgb(153,153,153);
+    font-size: 30rpx;
+    margin-right: 10rpx;
+  }
+  &--totalCost{
+    color: rgb(51,51,51);
+    font-size: 35rpx;
+    font-weight: bold;
+  }
+  &--end{
+    color: rgb(170, 170, 170);
+    font-size: 30rpx;
+    text-align: center;
+    margin-top: 30rpx;
+  }
+  &__empty{
+    // background-color: rgb(245, 245, 245);
+    display: flex;
+    flex-direction: column;
+    padding: 50rpx;
+    padding-top: 300rpx;
+    height: 100%;
+    &--tip{
+      color: rgb(152, 152, 152);
+      font-size: 30rpx;
+      text-align: center;
+      margin-bottom: 50rpx;
+    }
+    &--btn{
+      background-color: rgb(231, 0, 21);
+      color: #ffffff;
+      border-radius: 20rpx;
+    }
+  }
+}

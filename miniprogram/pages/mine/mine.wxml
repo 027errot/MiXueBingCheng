@@ -1,0 +1,50 @@
+<!--pages/mine/mine.wxml-->
+<view class="mine">
+  <!-- 签到 -->
+  <view class="mine__sign mine--item">
+    <view style="display: flex; align-items: center;" bindtap="toInfo">
+      <image src="../../static/home.png" class="mine__sign--img"></image>
+      <view class="mine__sign--phone">156******14</view>
+    </view>
+    <view class="mine__sign--btn">签到</view>
+  </view>
+  <!-- 会员等级 -->
+  <view class="mine__grade mine--item">
+    <view class="mine__grade--left">
+      <view class="mine__grade--member">大雪人会员</view>
+      <view class="mine__grade--experienceBar">甜蜜值：221/1000</view>
+      <view class="mine__grade--tip">再升1级可享【攒币加速】等9项权益</view>
+    </view>
+    <view class="mine__grade--right">
+      <image src="../../static/home.png" class="mine__grade--img"></image>
+      <view class="mine__grade--view">查看权益 ></view>
+    </view>
+  </view>
+  <!-- 雪王币、优惠券 -->
+  <view class="mine__remain mine--item">
+    <view wx:for="{{remainList}}" wx:key="item" wx:for-item="item" wx:for-index="index" class="mine__remain--item" bindtap="{{item.type === '雪王币' ? 'toResidue' : 'toCoupon'}}">
+      <view>
+        <view class="mine__remain--num">{{item.num}}</view>
+        <view class="mine__remain--type">{{item.type}}</view>
+      </view>
+      <image src="{{item.imgPaht}}" class="mine__remain--img"></image>
+    </view>
+  </view>
+  <!-- 功能列表 -->
+  <view class="mine__function mine--item">
+    <view wx:for="{{functionList}}" wx:key="item" wx:for-index="index" wx:for-item="item" class="mine__function--item">
+      <view class="mine__function--title">{{item.title}}</view>
+      <view class="mine__function--view">></view>
+    </view>
+  </view>
+  <!-- 下载ＡＰＰ -->
+  <view class="mine__app mine--item">
+    <view style="display: flex; align-items: center;">
+      <image src="../../static/home.png" class="mine__app--img"></image>
+      <view class="mine__app--des">蜜雪冰城APP</view>
+    </view>
+    <view class="mine__app--download">下载APP体验 <text style="font-size: 35rpx;">></text></view>
+  </view>
+  <!-- 版本号 -->
+  <view class="mine__version">版本号： 1.5.0</view>
+</view>
